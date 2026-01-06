@@ -9,6 +9,11 @@
   --dark-grey: #0d0d0d;
   --columns: 12;
 }
+::selection
+{
+  background: var(--yellow);
+  color: var(--dark-grey);
+}
 .img-fluid {
   width: 100%;
   height: 100%;
@@ -61,6 +66,10 @@
 .flex-grow-1
 {
   flex-grow: 1 !important;
+}
+.flex-wrap
+{
+  flex-wrap: wrap;
 }
 .col-1 {
   width: calc(100% / var(--columns) * 1);
@@ -126,6 +135,10 @@ header {
 {
     border-bottom: 1px solid #ffffff21;
 }
+header > .container-fluid > .row:first-child > div.col:last-child
+{
+  flex-grow: 1;
+}
 .navbar-brand > img {
   max-height: 39px;
 }
@@ -153,6 +166,10 @@ header {
 .meta-nav .details > a {
   color: rgba(255 255 255 / 50%);
   text-decoration: none;
+}
+header > .container-fluid > .row:last-child > div.col:nth-child(2)
+{
+  flex-grow: 1;
 }
 .navbar-nav
 {
