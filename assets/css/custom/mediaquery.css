@@ -1,11 +1,12 @@
-@media screen and (max-width: 575.99px)
+@media (width <= 575.99px)
 {
     [class^="col"]
     {
-        width: 100%;
+        flex-basis: 100%;
     }
     .meta-nav
     {
         padding: 30px 0px;
+        border: none;
     }
 }
