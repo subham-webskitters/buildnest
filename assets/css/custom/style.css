@@ -1,0 +1,135 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "General Sans", sans-serif;
+}
+:root {
+  --yellow: #fed403;
+  --columns: 12;
+}
+.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.align-items-center {
+  align-items: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -12px;
+}
+.container {
+    max-width: 1320px;
+    margin: 0px auto;
+}
+.container-fluid {
+    max-width: 100%;
+    margin: 0px auto;
+}
+[class^="container-"]
+{
+    padding: 0px 15px;
+}
+[class^="col"]
+{
+  padding-right: 12px;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+.col {
+  flex: 0 0 auto;
+}
+.flex-grow-1
+{
+  flex-grow: 1 !important;
+}
+.col-1 {
+  width: calc(100% / var(--columns) * 1);
+}
+.col-2 {
+  width: calc(100% / var(--columns) * 2);
+}
+.col-3 {
+  width: calc(100% / var(--columns) * 3);
+}
+.col-4 {
+  width: calc(100% / var(--columns) * 4);
+}
+.col-5 {
+  width: calc(100% / var(--columns) * 5);
+}
+.col-6 {
+  width: calc(100% / var(--columns) * 6);
+}
+.col-7 {
+  width: calc(100% / var(--columns) * 7);
+}
+.col-8 {
+  width: calc(100% / var(--columns) * 8);
+}
+.col-9 {
+  width: calc(100% / var(--columns) * 9);
+}
+.col-10 {
+  width: calc(100% / var(--columns) * 10);
+}
+.col-11 {
+  width: calc(100% / var(--columns) * 11);
+}
+.col-12 {
+  width: calc(100% / var(--columns) * 12);
+}
+
+header {
+  background: #0d0d0d;
+}
+.border-bottom
+{
+    border-bottom: 1px solid #ffffff21;
+}
+.navbar-brand > img {
+  max-height: 39px;
+}
+.meta-nav {
+  padding: 30px 50px;
+  color: #ffffff;
+  border-width: 0px 1px 0px 0px;
+  border-style: solid;
+  border-color: #ffffff21;
+}
+.icon {
+  width: 41px;
+  aspect-ratio: 1;
+  background: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  color: #0d0d0d;
+}
+.meta-nav .details > p {
+  font-weight: 500;
+  color: #ffffff;
+}
+.meta-nav .details > a {
+  color: rgba(255 255 255 / 50%);
+  text-decoration: none;
+}
