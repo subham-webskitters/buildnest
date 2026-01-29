@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -43,6 +43,9 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <link href="assets/css/custom/style.css" rel="stylesheet" type="text/css" />
@@ -127,9 +130,19 @@
             </div>
           </div>
           <div class="row">
-            <div class="col">
-              <div class="meta-nav border-0">
-                Building & Infrastructure Contractor
+            <div class="col d-flex align-items-center">
+              <div class="meta-nav border-0 px-0">
+                <div
+                  class="rotating-text-animation position-relative overflow-hidden"
+                >
+                  <span>Building & Infrastructure Contractor</span>
+                  <span>100% verified properties, no hidden cost</span>
+                  <span>Book now & save up to ₹1 Lakh!</span>
+                  <span>Exclusive launch discount available!</span>
+                  <span>RERA approved projects only</span>
+                  <span>Direct from builders — no brokerage</span>
+                  <span>Instant confirmation on every booking</span>
+                </div>
               </div>
             </div>
 
@@ -146,10 +159,78 @@
                       ><span>about us</span></a
                     >
                   </li>
-                  <li class="nav-item">
-                    <a href="#" data-title="projects" class="nav-link"
-                      ><span>projects</span></a
-                    >
+                  <li class="nav-item dropdown">
+                    <a href="#" data-title="projects" class="nav-link">
+                      <span>projects</span>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            data-title="About Us"
+                            href="#"
+                            ><span>About Us</span></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            data-title="Clients & Partners"
+                            href="#"
+                            ><span>Clients & Partners</span></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            data-title="Meet The Teams"
+                            href="#"
+                            ><span>Meet The Teams</span></a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" data-title="Careers" href="#"
+                            ><span>Careers</span></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            data-title="Our Core Value"
+                            href="#"
+                            ><span>Our Core Value</span></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            data-title="Pricing Table"
+                            href="#"
+                            ><span>Pricing Table</span></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            data-title="Working Process"
+                            href="#"
+                            ><span>Working Process</span></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            data-title="Contact Us"
+                            href="#"
+                            ><span>Contact Us</span></a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" data-title="Faqs" href="#"
+                            ><span>Faqs</span></a
+                          >
+                        </li>
+                      </ul>
+                    </a>
                   </li>
                   <li class="nav-item">
                     <a href="#" data-title="services" class="nav-link"
@@ -178,7 +259,9 @@
 
             <div class="col p-0 d-flex">
               <a href="#" class="main-btn">
-                <span data-title="request a quote"><span class="btn-label">request a quote</span></span>
+                <span data-title="request a quote"
+                  ><span class="btn-label">request a quote</span></span
+                >
               </a>
             </div>
           </div>
@@ -188,7 +271,7 @@
       <section class="banner">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-6 bg-neon-green">
+            <div class="col-6 p-0 banner-left">
               <div class="banner-content">
                 <h1>
                   Driven by <span>Design.</span> Built with
@@ -196,11 +279,25 @@
                 </h1>
               </div>
             </div>
-            <div class="col-6"></div>
+            <div class="col-6 p-0">
+              <figure>
+                <img
+                  src="./assets/images/hero-image.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </figure>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- jquery lib -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Custom js -->
     <script src="./assets/js/custom/main.js"></script>

@@ -13,3 +13,91 @@ window.addEventListener("load", () => {
 });
 
 // Loader End Here
+
+// AOS Initialize
+
+AOS.init({
+  offset: 20,
+  duration: 1000,
+});
+
+// AOS End Here
+
+// Reveal Dropdown Items One By One
+
+document.querySelectorAll(".dropdown").forEach((dropdown) => {
+  dropdown.addEventListener("mouseenter", () => {
+    const items = dropdown.querySelectorAll(".dropdown-menu li");
+    const initialDelay = 300; // Delay before starting the item animations
+
+    // Set the initial state of the items for the first hover
+    items.forEach((item) => {
+      item.style.opacity = "0";
+      item.style.transform = "translateY(10px)";
+      item.style.transition = "none"; // Disable transition to reset instantly
+    });
+
+    // Add a delay before starting the item animations
+    setTimeout(() => {
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.style.transition = "opacity 0.3s ease, transform 0.3s ease"; // Enable transition
+          item.style.opacity = "1";
+          item.style.transform = "translateY(0)";
+        }, index * 100); // Delay for each item (100ms per item)
+      });
+    }, initialDelay); // Initial delay before starting the animations
+  });
+
+  dropdown.addEventListener("mouseleave", () => {
+    const items = dropdown.querySelectorAll(".dropdown-nav li");
+
+    // Reset the animation when the mouse leaves
+    items.forEach((item) => {
+      item.style.opacity = "0";
+      item.style.transform = "translateY(10px)";
+    });
+  });
+});
+
+// Reveal Dropdown Items One By One End Here
+
+// Rotating Text Animation - Use Anywhere
+
+$(document).ready(function () {
+  $(".rotating-text-animation").each(function () {
+    const $wrapper = $(this);
+    const $inner = $("<div class='rotating-text-inner'></div>");
+
+    $inner.append($wrapper.find("span"));
+    $wrapper.html($inner);
+
+    const height = $wrapper.height();
+    const duration = 600;
+    const delay = 2000;
+
+    setInterval(() => {
+      // slide up
+      $inner.css("transform", `translateY(-${height}px)`);
+
+      // after animation completes
+      setTimeout(() => {
+        // reset instantly
+        $inner.css("transition", "none");
+        $inner.css("transform", "translateY(0)");
+
+        // move first item to bottom
+        $inner.append($inner.find("span").first());
+
+        // re-enable transition
+        $inner[0].offsetHeight;
+        $inner.css(
+          "transition",
+          "transform 0.6s cubic-bezier(0.84, 0.03, 0.06, 0.9)",
+        );
+      }, duration);
+    }, duration + delay);
+  });
+});
+
+// Rotating Text Animation - Use Anywhere End Here
