@@ -107,8 +107,7 @@
 .p-0 {
   padding: 0px !important;
 }
-.px-0
-{
+.px-0 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
 }
@@ -133,11 +132,20 @@
 .overflow-hidden {
   overflow: hidden !important;
 }
+.d-none {
+  display: none;
+}
+p {
+  opacity: 50%;
+}
 
-/* From Uiverse.io by Shoh2008 */
+/* Loader */
 
+body.loading {
+  overflow: hidden;
+}
 #loader-wrapper {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: var(--dark-grey);
   z-index: 999999;
@@ -207,10 +215,6 @@
   100% {
     transform: translateX(-20px);
   }
-}
-
-.hidden {
-  display: none;
 }
 
 header {
@@ -511,12 +515,6 @@ ul.navbar-nav > li.dropdown > ul.dropdown-menu > li > a.dropdown-item {
   white-space: nowrap;
 }
 
-
-
-
-
-
-
 /* Header End Here */
 
 /* Banner */
@@ -551,14 +549,39 @@ ul.navbar-nav > li.dropdown > ul.dropdown-menu > li > a.dropdown-item {
   background-size: 120px 120px;
 }
 .banner-content {
-  padding: 120px 0px 120px 100px;
+  padding: 120px 42px;
 }
 .banner-content > h1 {
   font-size: 55px;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 63px;
+  letter-spacing: -3px;
+  margin-bottom: 30px;
 }
-.banner-content > h1 > span {
-  opacity: 50%;
+.banner-content > h1 + div span {
+  font-size: 55px;
+  font-weight: 700;
+}
+.aos-letter-reveal span {
+  display: inline-block;
+  letter-spacing: inherit;
+}
+.letter-reveal span {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.6);
+  will-change: transform, opacity;
+}
+.banner-right
+{
+  background: url(../../images/hero-image.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 500px;
+}
+.test
+{
+  width: 100%;
+  height: 100vh;
 }
